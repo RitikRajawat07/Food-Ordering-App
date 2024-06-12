@@ -3,8 +3,13 @@ const heading=React.createElement(
      {id: "heading"}, // used to add attributs.
     "Hello World (using React)"
 );
+const heading2=React.createElement(
+    "h1",
+     {id: "heading"}, // used to add attributs.
+    "Hello World2 (using React)"
+);
 const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(heading2);
 
 /*
 practice :-
