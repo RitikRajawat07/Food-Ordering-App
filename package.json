@@ -1,0 +1,34 @@
+{
+  "name": "lec-1",
+  "version": "1.0.0",
+  "description": "This is react course",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RitikRajawat07/React_AS.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ritik Rajawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RitikRajawat07/React_AS/issues"
+  },
+  "homepage": "https://github.com/RitikRajawat07/React_AS#readme",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
+}
