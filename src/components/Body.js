@@ -11,11 +11,11 @@ const Body=() => {
             <div className="filter"> 
                 <button className="filter-btn" 
                   onClick={() => {
-                    const filteredList = listOfRestaurant.filter(
+                    const filteredListOfRestaurant = listOfRestaurant.filter(
                         (res) => res.info.avgRating > 4
                     );
 
-                    setListOfRestaurant(filteredList);
+                    setListOfRestaurant(filteredListOfRestaurant);
 
                   }}
                 >
