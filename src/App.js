@@ -1,4 +1,4 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import {Header} from "./components/Header"; // named export/import;
 import Body from "./components/Body";      // default export/import;
@@ -7,7 +7,12 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestrauntMenu";
+import Shimmer from "./components/Shimmer";
+// import Grocery from "./components/Grocery";
 
+// making grocery a new bundle so to do this we import it like :-
+
+const Grocery = lazy( () =>  import ("./components/Grocery"));
 
 const AppLayout=() => {
     return (
@@ -34,6 +39,14 @@ const appRouter = createBrowserRouter([
             {
                 path:"/contact",
                 element:<Contact/>,
+            },
+            {
+                path:"/grocery",
+                element:(
+                    <Suspense fallback={<Shimmer/>} >
+                        <Grocery/>
+                    </Suspense>
+                )
             },
             {
                 path:"/restaurants/:resId",

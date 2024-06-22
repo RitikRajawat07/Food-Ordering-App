@@ -30,9 +30,11 @@
 
 .res-card{
     width:230px;
+    height: 500px;
     padding:5px;
     margin:5px;
     text-wrap:wrap;
+
 }
 
 .res-card:hover{
@@ -46,7 +48,7 @@
 
 .res-logo{
     width:100%;
-    height:50%;
+    height:40%;
 }
 
 .filter-btn{
