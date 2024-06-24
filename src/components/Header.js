@@ -10,40 +10,42 @@ export const Header=() => {
     const onlineStatus = useOnlineStatus();
 
     return (
-        <div className="header">
+        <div className="flex justify-between shadow-lg bg-pink-100 sm:bg-yellow-100 lg:bg-green-50 ">
             <div className="logo-container">
-                <img className="logo"
+                <img className="w-56"
                     src={LOGO_URL}
                 />
             </div>
-            <div className="nav-items">
-                <ul> 
+            <div className="flex items-center">
+                <ul className="flex p-4 m-4"> 
 
-                    <li>
+                    <li className="px-4">
                         Online Status: {onlineStatus ? "🟢" : "🔴"}
                     </li>
 
-                    <li>
+                    <li className="px-4 hover:text-slate-500">
                     <Link to="/">Home</Link>
                     </li>
 
-                    <li>
+                    <li className="px-4 hover:text-slate-500">
                         <Link to="/about">About Us</Link>
                     </li>
 
-                    <li>
+                    <li className="px-4 hover:text-slate-500">
                         <Link to="/contact">Contact Us</Link>
                     </li>
 
-                    <li>
+                    <li className="px-4 hover:text-slate-500">
                         <Link to="/grocery">Grocery</Link>
                     </li>
 
-                    <li>Cart</li>
+                    <li className="px-4 hover:text-slate-500">
+                        Cart
+                    </li>
 
-                    <button className="login"
+                    <button className="px-4 rounded-lg hover:text-slate-500 "
                         onClick={() => {
-                            btnName === "Login" ? setBtnName("Logout") : setBtnName("Logi n");
+                            btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
                         }}
                     >
                         {btnName}
