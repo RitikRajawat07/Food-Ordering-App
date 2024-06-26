@@ -10,9 +10,9 @@ export const Header=() => {
     const onlineStatus = useOnlineStatus();
 
     return (
-        <div className="flex justify-between shadow-lg bg-pink-100 sm:bg-yellow-100 lg:bg-green-50 ">
+        <div className="flex justify-between h-32 shadow-lg bg-pink-100 sm:bg-yellow-100 lg:bg-green-50 ">
             <div className="logo-container">
-                <img className="w-56"
+                <img className="w-36 h-32"
                     src={LOGO_URL}
                 />
             </div>
