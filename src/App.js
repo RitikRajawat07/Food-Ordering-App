@@ -9,6 +9,8 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestrauntMenu";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 // import Grocery from "./components/Grocery";
 
 // making grocery a new bundle so to do this we import it like :-
@@ -28,8 +30,10 @@ const AppLayout=() => {
     },[]);
 
     return (
-         
-        <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
+
+        <Provider store={appStore}>
+
+            <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
 
             <div className="app">
                 
@@ -37,7 +41,11 @@ const AppLayout=() => {
                 <Outlet/>
             </div>
 
-        </UserContext.Provider>
+            </UserContext.Provider>
+
+        </Provider>
+         
+        
         
     );
 };

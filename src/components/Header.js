@@ -3,6 +3,7 @@ import {useState,useContext} from "react";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 export const Header=() => {
 
@@ -11,6 +12,9 @@ export const Header=() => {
     const onlineStatus = useOnlineStatus();
 
     const {loggedInUser} = useContext(UserContext);
+
+    // Subscribing to the redux store using a Selector;
+    const cartItems = useSelector((store) => store.cart.items);
 
     return (
         <div className="flex justify-between h-32 shadow-lg bg-pink-100 sm:bg-yellow-100 lg:bg-green-50 ">
@@ -43,7 +47,7 @@ export const Header=() => {
                     </li>
 
                     <li className="px-4 hover:text-slate-500">
-                        Cart
+                        Cart ({cartItems.length} items)
                     </li>
 
                     <button className="px-4 rounded-lg hover:text-slate-500 "
