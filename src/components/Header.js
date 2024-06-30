@@ -47,7 +47,7 @@ export const Header=() => {
                     </li>
 
                     <li className="px-4 hover:text-slate-500">
-                        Cart ({cartItems.length} items)
+                        <Link to="/cart"> Cart ({cartItems.length} items) </Link>
                     </li>
 
                     <button className="px-4 rounded-lg hover:text-slate-500 "
